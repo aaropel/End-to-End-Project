@@ -13,7 +13,7 @@ The project includes:
 - raw-data profiling and investigation with Python
 - reproducible cleaning and validation with pandas
 - relational database design in SQLite
-- SQL analysis of revenue, profit, customers, products, returns and marketing campaigns
+- SQL analysis of revenue, profit, customers, products, returns and marketing campaign
 - interactive Power BI dashboards
 - documentation of data-quality findings and project decisions
 
@@ -65,6 +65,12 @@ The SQL layer answers business questions including:
 - campaign conversion rate
 - cost per purchase
 - ROAS
+
+## Power BI Data Source
+
+The Power BI report connects to the SQLite database through an ODBC data source named `sqlite_ecommerce`.
+
+The `.pbix` file contains the report model and visuals, but refreshing the data on another machine requires a local ODBC DSN with the same name pointing to the SQLite database.
 
 ## Power BI dashboard
 
