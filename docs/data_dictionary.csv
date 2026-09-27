@@ -1,0 +1,57 @@
+table,column,description,suggested_type
+customers,customer_id,Unique customer key,TEXT
+customers,signup_date,Customer registration date,DATE
+customers,country,Customer country,TEXT
+customers,country_code,ISO-like 2-letter market code,TEXT
+customers,region,Broad European region,TEXT
+customers,city,Customer city,TEXT
+customers,age,Synthetic customer age,NUMBER
+customers,customer_segment,Consumer / Professional / Small Business,TEXT
+customers,acquisition_channel,Original acquisition source,TEXT
+customers,email_opt_in,"1 if marketing email opt-in, else 0",NUMBER
+products,product_id,Unique product key,TEXT
+products,product_name,Product/variant name,TEXT
+products,category,Product category,TEXT
+products,brand,Synthetic brand,TEXT
+products,unit_cost,Estimated unit COGS,NUMBER
+products,list_price,Reference list price,NUMBER
+products,launch_date,Product launch date,DATE
+products,active,"1 if active, else 0",NUMBER
+orders,order_id,Unique order key,TEXT
+orders,customer_id,FK to customers,TEXT
+orders,order_date,Order date,DATE
+orders,status,Delivered / Cancelled / Returned,TEXT
+orders,sales_channel,Web or Mobile App,TEXT
+orders,marketing_channel,Attributed marketing channel,TEXT
+orders,campaign_id,Optional FK to campaign,TEXT
+orders,device,Desktop / Mobile / Tablet,TEXT
+orders,payment_method,Payment method,TEXT
+orders,discount_rate,Order-level discount rate,NUMBER
+orders,shipping_fee,Shipping fee charged,NUMBER
+order_items,order_item_id,Unique line-item key,TEXT
+order_items,order_id,FK to orders,TEXT
+order_items,product_id,FK to products,TEXT
+order_items,quantity,Units,NUMBER
+order_items,unit_price,Pre-discount unit selling price,NUMBER
+order_items,discount_amount,Total discount on line,NUMBER
+order_items,net_revenue,Net line revenue after discount,NUMBER
+order_items,cost_of_goods,Line COGS,NUMBER
+campaigns,campaign_id,Unique campaign key,TEXT
+campaigns,month,Campaign month,DATE
+campaigns,channel,Marketing channel,TEXT
+campaigns,country_code,Market,TEXT
+campaigns,campaign_name,Synthetic campaign label,TEXT
+campaigns,spend,Campaign spend EUR,NUMBER
+campaigns,impressions,Ad/email impressions,NUMBER
+campaigns,clicks,Clicks,NUMBER
+returns,return_id,Unique return key,TEXT
+returns,order_item_id,FK to order_items,TEXT
+returns,return_date,Return date,DATE
+returns,return_reason,Synthetic return reason,TEXT
+returns,refund_amount,Refund value EUR,NUMBER
+website_traffic,date,Calendar date,DATE
+website_traffic,sessions,Website/app sessions,NUMBER
+website_traffic,unique_visitors,Unique visitors,NUMBER
+website_traffic,add_to_cart,Add-to-cart events,NUMBER
+website_traffic,conversion_rate,Synthetic daily conversion rate,NUMBER
+website_traffic,bounce_rate,Synthetic daily bounce rate,NUMBER

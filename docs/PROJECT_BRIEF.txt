@@ -1,0 +1,20 @@
+PROJECT BRIEF
+
+You are a Business Intelligence Analyst at a fictional European e-commerce company.
+Management wants a decision-support system that explains current performance, identifies
+growth and profitability drivers, evaluates marketing efficiency and highlights areas requiring action.
+
+Required outputs:
+1. Reproducible Python ETL pipeline.
+2. PostgreSQL database and documented schema.
+3. SQL KPI/analysis queries.
+4. Power BI executive dashboard.
+5. Customer/product/marketing drill-down pages.
+6. Statistical analysis of at least one business hypothesis.
+7. Revenue or demand forecast with an explicit baseline and error metric.
+8. Excel scenario model for one management decision.
+9. Executive summary with 3-5 evidence-based recommendations.
+
+Suggested KPIs:
+Revenue, gross profit, gross margin %, orders, units, AOV, customers, repeat customer rate,
+return rate, refund value, discount %, CAC proxy, ROAS, conversion rate and revenue growth.
