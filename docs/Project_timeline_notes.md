@@ -10,7 +10,7 @@ During SQL analysis, I noticed that the customer ages showed an unusually large 
 
 For the sake of honesty, my impatience directed me to rely on the AI when running into roadblocks such as, setting up a virtual environment, designing the project folder or any small mistakes I made along the way. However the implementation itself was written and worked through manually. I thought the interaction was similar to consulting a more experienced colleague. Asking for explanations or direction when needed while ensuring that I understood and implemented everything myself.
 
-Then it was time to create a Power BI dashboard, that shows some quick information about the company. This part of the project took the longest, as graphic design is not my strong suit. The dashboard underwent multiple changes and versions. I learned several practical Power BI skills, including when to use cards versus KPI visuals, how to approach a sensible way to bring data to life. I'm very pleased with the outcome.
+Then it was time to create a Power BI dashboard, that shows some insight about the company. This part of the project took the longest, as graphic design is not my strong suit. The dashboard underwent multiple changes and versions. I learned several practical Power BI skills, including when to use cards versus KPI visuals, how to approach a sensible way to bring data to life. I'm very pleased with the outcome.
 
 
 
