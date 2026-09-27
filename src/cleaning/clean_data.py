@@ -1,5 +1,6 @@
 import pandas as pd
 from pathlib import Path
+from src.validation.validation import *
 
 # Find the data
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
@@ -67,46 +68,6 @@ def clean_website_traffic(df):
     df["date"] = pd.to_datetime(df["date"], format = 'mixed')
     return df
 
-# Set checks for the most critical values
-def validate_orders(df):
-    assert df["order_id"].is_unique, "Duplicate order IDs found"
-    assert df["order_id"].notna().all(), "Missing order IDs found"
-    assert df["customer_id"].notna().all(), "Missing customer IDs found"
-    assert df["order_date"].notna().all(), "Missing order dates found"
-    print("ORDERS VALIDATION OK")
-
-def validate_customers(df):
-    assert df["customer_id"].is_unique, "Duplicate customer IDs found"
-    assert df["customer_id"].notna().all(), "Missing customer IDs found"
-    assert df["email_opt_in"].notna().all(), "Missing email opt in found"
-    assert df["signup_date"].notna().all(), "Missing sign up dates found"
-    print("CUSTOMERS VALIDATION OK")
-
-def validate_products(df):
-    assert df["product_id"].is_unique, "Duplicate product IDs found"
-    assert df["active"].notna().all(), "Missing active status found"   
-    print("PRODUCTS VALIDATION OK")
-
-def validate_order_items(df):
-    assert df["order_item_id"].is_unique, "Duplicate order item IDs found"
-    assert df["order_item_id"].notna().all(), "Missing order item IDs found"
-    print("ORDER ITEMS VALIDATION OK")
-
-def validate_returns(df):
-    assert df["return_id"].is_unique, "Duplicate return IDs found"
-    assert df["return_id"].notna().all(), "Missing return IDs found"
-    assert df["order_item_id"].is_unique, "Duplicate order item IDs found"
-    assert df["order_item_id"].notna().all(), "Missing order item IDs found"
-    print("RETURNS VALIDATION OK")
-
-def validate_campaigns(df):
-    assert df["campaign_id"].is_unique, "Duplicate campaign IDs found"
-    assert df["campaign_id"].notna().all(), "Missing campaign IDs found"
-    print("CAMPAIGN VALIDATION OK")
-
-def validate_website_traffic(df):
-    assert df["date"].notna().all(), "Missing date found"
-    print("WEBSITE TRAFFIC VALIDATION OK")
 
 def main():
     # Load the data
@@ -127,7 +88,7 @@ def main():
     campaigns = clean_campaigns(campaigns)
     website_traffic = clean_website_traffic(website_traffic)
 
-    # Make sure it's ok
+    # Validate the data so no critical values are missing
     validate_customers(customers)
     validate_orders(orders)
     validate_products(products)

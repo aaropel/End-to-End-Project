@@ -21,7 +21,6 @@ website_traffic = pd.read_csv(RAW_DIR / "website_traffic.csv")
 # Let's have a look at whats going on
 def inspect_data(df):
 
-
     print("\nshape")
     print(df.shape)
 
