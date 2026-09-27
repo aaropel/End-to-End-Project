@@ -1,0 +1,22 @@
+[project]
+name = "end-to-end-BI-project"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Aaro Peltonen"}
+]
+requires-python = ">=3.12"
+
+[tool.poetry]
+package-mode = false
+
+[tool.poetry.dependencies]
+pandas = "^3.0.6"
+numpy = "^2.5.3"
+matplotlib = "^3.11.2"
+scipy = "^1.18.1"
+scikit-learn = "^1.9.1"
+jupyter = "^1.1.1"
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
